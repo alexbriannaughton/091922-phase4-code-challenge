@@ -11,7 +11,7 @@ class PowersController < ApplicationController
     def update
         power = Power.find(params[:id])
         power.update!(power_params)
-        render json: power, status: 202
+        render json: power, status: :accepted
     end
 
     private
